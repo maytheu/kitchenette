@@ -1,0 +1,22 @@
+{
+  "name": "kitchenette",
+  "version": "1.0.0",
+  "description": "Website of the kitchenette website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maytheu/kitchenette.git"
+  },
+  "keywords": [
+    "kitchen"
+  ],
+  "author": "maytheu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maytheu/kitchenette/issues"
+  },
+  "homepage": "https://github.com/maytheu/kitchenette#readme"
+}
