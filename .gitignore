@@ -1,0 +1,7 @@
+.env
+
+client/build
+
+.npmrc
+
+node_modules
