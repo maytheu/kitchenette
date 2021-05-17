@@ -94,7 +94,7 @@ input {
   margin: 20px 0;
   /* height: 60vh; */
   width: 100%;
-  /* display: flex; */
+  display: flex;
   /* align-items: center; */
   /* border: 1px solid black; */
 }
@@ -134,39 +134,137 @@ input {
 .carousel {
   /* border: 10px solid yellow; */
   /* height: 100%; */
-  flex:1;
+  flex: 1;
   width: 75%;
   /* height: 100%; */
 }
 
-.slider{
-  width:  100%;
+.slider {
+  width: 100%;
   height: 385px;
   /* flex-grow: 1; */
   /* border: 2px solid black; */
 }
 
-.slider:hover .caption{
+.slider:hover .caption {
   color: #fc5c24;
 }
 
-.slider img{
+.slider img {
   width: 100%;
   height: 100%;
 }
 
-.slider-caption{
+.slider-caption {
   position: relative;
   /* width: fit-content; */
 }
 
-.caption{
+.caption {
   margin-top: -75px;
-  background-color:rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.65);
   padding: 20px;
   position: absolute;
   right: 0;
   color: #fff;
   bottom: 1;
+  font-size: 1.3em;
+}
+
+/***********************************************
+*/
+
+.title {
+  text-transform: capitalize;
+  font-size: 1.65em;
+  background-color: #ffaa90;
+  color: white;
+  padding: 5px 0 5px 50px;
+}
+
+.title h2 {
+  font-weight: 600;
+  margin: 0;
+}
+
+.arrivals {
+  display: flex;
+    margin: 0 auto;
+}
+
+.arrival {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  margin: 10px 0 5px 3px;
+}
+
+.arrival:hover .arrival-img {
+  width: 100%;
+}
+
+.arrival:hover .arrival-details {
+  display: none;
+}
+
+.arrival:hover .arrival-view {
+  display: block;
+}
+
+.arrival-img {
+  width: 500px;
+  height: 300px;
+}
+
+.arrival-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.arrival-view {
+  display: none;
+  position: relative;
+  width: 100%;
+}
+
+.arrival-click {
+  margin-top: -75px;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 10px 7px;
+  position: absolute;
+  bottom: 1;
+  font-size: 1em;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrival-click a {
+  color: #fff;
+}
+
+.arrival-details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+h4{
+  font-weight: 500;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.arrival-text{
+  font-size: 0.9em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.arrival-price{
+  font-weight: 600;
+  padding: 10px 0;
   font-size: 1.3em;
 }

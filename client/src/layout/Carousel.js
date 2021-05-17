@@ -16,7 +16,6 @@ function Carousel(props) {
 
   const slider = () => {
     return props.slider.map((slide, i) => {
-      console.log(slide.img);
       return (
         <div key={i} className="slider">
           <Link to={slide.link}>

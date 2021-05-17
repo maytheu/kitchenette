@@ -1,7 +1,7 @@
 function View(props) {
   const style = {
     height: props.height ? props.height : "60vh",
-    display: props.display ? props.display : "flex",
+    flexDirection: props.direction ? props.direction : "row",
   };
   return (
     <div className="view" style={style}>

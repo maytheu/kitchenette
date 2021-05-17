@@ -5,13 +5,15 @@ import Carousel from "../../layout/Carousel";
 import Header from "../../layout/Header";
 import Page from "../../layout/Page";
 import View from "../../layout/View";
+import Title from "../../layout/Title";
+import New from "./New";
 
 import slider1 from "../../assets/img/3phase.jpg";
 import slider2 from "../../assets/img/bidspoon.jpg";
 import slider3 from "../../assets/img/bixtray.jpg";
 import slider4 from "../../assets/img/centerdrawer.jpg";
 import slider5 from "../../assets/img/logos.png";
-import Title from "../../layout/Title";
+import micro from "../../assets/img/microwave1.jpg";
 
 function Homepage(props) {
   const [slider, setSlider] = useState([]);
@@ -21,6 +23,45 @@ function Homepage(props) {
     { img: slider3, caption: "slider 3", link: "/category/cabinet" },
     { img: slider4, caption: "Sloder 4", link: "/category/cabinet" },
     { img: slider5, caption: "slider 5", link: "/category/cabinet" },
+  ];
+
+  const arrivals = [
+    {
+      img: slider1,
+      link: "Gas",
+      text: "Check out our newest gas collections, starting from",
+      price: "25,000.00",
+    },
+    {
+      img: slider4,
+      link: "Furniture",
+      text: "Check out our newest furniture collections, starting from",
+      price: "15,000.00",
+    },
+    {
+      img: micro,
+      link: "Microwave",
+      text: "Check out our newest microwave collections, starting from",
+      price: "5,000.00",
+    },
+    {
+      img: slider1,
+      link: "Gas",
+      text: "Check out our newest gas collections, starting from",
+      price: "25,000.00",
+    },
+    // {
+    //   img: slider4,
+    //   link: "Furniture",
+    //   text: "Check out our newest furniture collections, starting from",
+    //   price: "15,000.00",
+    // },
+    // {
+    //   img: micro,
+    //   link: "Microwave",
+    //   text: "Check out our newest microwave collections, starting from",
+    //   price: "5,000.00",
+    // },
   ];
 
   useEffect(() => {
@@ -66,10 +107,13 @@ function Homepage(props) {
             </ul>
           </div>
           <div className="carousel">
-            <Carousel slider={slider} />
+            {slider.length === 0 ? "loading" : <Carousel slider={slider} />}
           </div>
         </View>
-        <View><Title></Title></View>
+        <View direction="column" height="58vh">
+          <Title>new Arivals</Title>
+          {slider.length === 0 ? "loading" : <New latest={arrivals} />}
+        </View>
       </Page>
     </>
   );
